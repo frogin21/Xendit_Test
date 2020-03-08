@@ -61,7 +61,6 @@ public class Division {
       
       
     //Compare image
-      
       BufferedImage expectedImage = ImageIO.read(new File("/Users/rachmat/Desktop/Division_ACT.png"));
           
       Screenshot logoImageScreenshot2 = new AShot().takeScreenshot(driver);
@@ -79,31 +78,5 @@ public class Division {
       }
       driver.close();
       
-  }  
-  
-  public void CEFunction() throws Exception {
-	    driver.get(baseUrl);
-	    driver.manage().window().maximize();
-	   
-	    new WebDriverWait(driver, 10).until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(By.id("fullframe")));
-	    WebElement canvas = new WebDriverWait(driver, 10).until( ExpectedConditions.elementToBeClickable(By.id("canvas")));
-	    
-	  //clicking on 6
-	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-(174/5)*1,(255/6)*2).click().build().perform();
-	  //clicking on the substract sign (-)
-	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset((174/5)*2,(255/6)*3).click().build().perform();
-	  //clicking on 3
-	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset(-(174/5)*1,(255/6)*3).click().build().perform();
-	  //clicking on equals to sign (=)
-	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset((174/2)*2,(255/6)*5).click().build().perform();
-	 
-	  //clicking on CE red button
-	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset((174/2)*2,(255/6)*(-3)).click().build().perform();
-	    
-	    driver.close();
-	  
-  }
-  
-
-  
+  }    
 }

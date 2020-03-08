@@ -62,7 +62,6 @@ public class CE_RedButton {
 	    new Actions(driver).moveToElement(canvas, 0, 0).moveByOffset((174/2)*2,(255/6)*(-3)).click().build().perform();
 
 	  //Compare image
-	      
 	  BufferedImage expectedImage = ImageIO.read(new File("/Users/rachmat/Desktop/CE_EXP.png"));
 	      
 	  Screenshot logoImageScreenshot2 = new AShot().takeScreenshot(driver);
